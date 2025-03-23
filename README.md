@@ -1,14 +1,14 @@
-# [TEAM ACVLAB][NTIRE 2025 Image Shadow Removal Challenge](https://cvlai.net/ntire/2025/) @ [CVPR 2025](https://cvpr.thecvf.com/)
+# [TEAM ACVLAB][NTIRE 2025 Image Reflection Removal Challenge](https://cvlai.net/ntire/2025/) @ [CVPR 2025](https://cvpr.thecvf.com/)
 
 ## Link to the codes/executables of the solution(s):
-* [Checkpoints](https://drive.google.com/file/d/1USD5sLvEcgFqIg7BDzc1OuInzSx3GnUN/view?usp=drive_link)
+* [Checkpoints](https://drive.google.com/file/d/1aivtTxrhFUcepZtnYmMupaiEoH27r91o/view?usp=drive_link)
 * Input / Output file
 
 ## Environments
 ```bash
-conda create -n ntire_shadow python=3.9 -y
+conda create -n ntire_reflection python=3.9 -y
 
-conda activate ntire_shadow
+conda activate ntire_reflection
 
 pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
 
@@ -19,17 +19,17 @@ pip install -r requirements.txt
 ## Folder Structure
 ```bash
 test_dir
-├── Origin          <- Put the shadow affected images in this folder
-│   ├── 0000.png
-│   ├── 0001.png
+├── Origin          <- Put the reflection affected images in this folder
+│   ├── test_0000.png
+│   ├── test_0001.png
 │   ├── ...
 ├── Depth
 ├── Normal
 
 
 output_dir
-├── 0000.png
-├── 0001.png
+├── test_0000.png
+├── test_0001.png
 ├──...
 ```
 
@@ -50,16 +50,16 @@ Now folder structure will be
 ```bash
 test_dir
 ├── Origin
-│   ├── 0000.png
-│   ├── 0001.png
+│   ├── test_0000.png
+│   ├── test_0001.png
 │   ├── ...
 ├── Depth
-│   ├── 0000.npy
-│   ├── 0001.npy
+│   ├── test_0000.npy
+│   ├── test_0001.npy
 │   ├── ...
 ├── Normal
-│   ├── 0000.npy
-│   ├── 0001.npy
+│   ├── test_0000.npy
+│   ├── test_0001.npy
 │   ├── ...
 
 output_dir
@@ -73,10 +73,10 @@ output_dir
 git clone https://github.com/facebookresearch/dinov2.git
 ```
 
-1. Download [shadow removal weight](https://drive.google.com/file/d/1USD5sLvEcgFqIg7BDzc1OuInzSx3GnUN/view?usp=drive_link)
+1. Download [Reflection removal weight](https://drive.google.com/file/d/1aivtTxrhFUcepZtnYmMupaiEoH27r91o/view?usp=drive_link)
 
 ```bash 
-gdown 1USD5sLvEcgFqIg7BDzc1OuInzSx3GnUN
+gdown 1aivtTxrhFUcepZtnYmMupaiEoH27r91o
 ```
 
 6. Run ```run_test.sh``` to get inference results.
@@ -85,4 +85,4 @@ gdown 1USD5sLvEcgFqIg7BDzc1OuInzSx3GnUN
 bash run_test.sh
 ```
 ## License and Acknowledgement
-This code repository is release under [MIT License](https://github.com/VanLinLin/NTIRE25_Shadow_Removal?tab=MIT-1-ov-file#readme).
+This code repository is release under [MIT License](https://github.com/VanLinLin/NTIRE25_reflection_Removal-?tab=MIT-1-ov-file#readme).

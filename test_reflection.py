@@ -21,7 +21,7 @@ parser.add_argument('--input_dir', default='test_dir',
     type=str, help='Directory of validation images')
 parser.add_argument('--result_dir', default='./output_dir',
     type=str, help='Directory for results')
-parser.add_argument('--weights', default='ACVLab_shadow.pth'
+parser.add_argument('--weights', default='ACVLab_reflection.pth'
                     ,type=str, help='Path to weights')
 # parser.add_argument('--arch', default='ShadowFormer', type=str, help='arch')
 parser.add_argument('--arch', type=str, default='ShadowFormerFreq', help='archtechture')
